@@ -1,0 +1,34 @@
+/*
+.bg {
+    /* Center and scale the image nicely
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  */
+  
+  #texto{
+    text-align: justify; 
+    background-color: rgba(255, 255, 255); 
+    padding: 5%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family: "Helvetica Narrow Bold";
+    font-size: large;
+  }
+  #mainLogo{
+    max-height: 300px;
+    width: auto;
+  }
+@font-face {
+    font-family: "Gilroy Heavy Italic";
+    src: url("../../../assets/fonts/GILROY-HEAVYITALIC_0.OTF");
+}
+@font-face {
+    font-family: "Aileron";
+    src: url("../../../assets/fonts/AILERON-REGULAR.OTF");
+}
+@font-face {
+  font-family: "Helvetica Narrow Bold";
+  src: url("../../../assets/fonts/HELVE-NARROW-BOLD.TTF");
+}

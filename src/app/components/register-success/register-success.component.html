@@ -1,0 +1,30 @@
+<div class="col-md-4 offset-md-4">
+    <div class="card animate__animated animate__tada">     
+        <div class="card-body">
+            <h5 class="class-title text-center">¡Registro exitoso!</h5>
+            <hr>
+            <div *ngIf='mainRegister' class="alert alert-success text-center" role="alert">
+                <b>Felicidades</b>, tu registro se ha realizado de forma exitosa. <br><br>
+                Recuerda que tu <b>ID</b> de registro es: <br><b style="font-size: xx-large;">{{id}}</b><br><br>
+                ¡Úsalo para verificar tu entrada en los demás stands del evento!
+            </div>
+            <div *ngIf='standRegister' class="alert alert-success text-center" role="alert">
+                Felicidades, tu registro en el stand <b class="text-uppercase">{{stand}}</b> se ha realizado de forma exitosa. <br><br>
+                Recuerda que tu <b>ID</b> de registro es: <br><b style="font-size: xx-large;">{{id}}</b><br><br>
+                ¡Úsalo para verificar tu entrada en los demás stands del evento!
+            </div>
+            <div *ngIf='finalStand' class="alert alert-success text-center" role="alert">
+                <b>Felicidades</b>, has completado todos los registros del evento. <br><br>
+                <b style="font-size: x-large;">
+                    ¡Ya estás participando en el sorteo!
+                </b>
+            </div>
+            <hr>
+            <div class="d-grid gap-2">
+                <button type = 'submit' class = 'btn btn-warning tabindex="-1"' routerLink="/">
+                    <strong>Volver a la página principal</strong>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

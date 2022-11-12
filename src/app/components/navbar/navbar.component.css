@@ -1,0 +1,24 @@
+.navbar-brand{
+    font-family: "Helvetica Narrow Bold";
+    font-size: xx-large;
+    vertical-align: middle;
+}
+#navLogo{
+    height: 37px;
+    width: auto;
+    left: 15px;
+    vertical-align: middle;
+}
+
+@font-face {
+    font-family: "Gilroy Heavy Italic";
+    src: url("../../../assets/fonts/GILROY-HEAVYITALIC_0.OTF");
+}
+@font-face {
+    font-family: "Aileron";
+    src: url("../../../assets/fonts/AILERON-REGULAR.OTF");
+}
+@font-face {
+    font-family: "Helvetica Narrow Bold";
+    src: url("../../../assets/fonts/HELVE-NARROW-BOLD.TTF");
+}

@@ -1,0 +1,31 @@
+
+#logoFondo{
+    background-color: white;
+    border-radius: 10px;
+}
+.card{
+    background-color: rgb(50,0,74);
+    color: white;
+    
+}
+.form-control{
+    background-color: rgb(86,12,105);
+    border-color: rgb(86,12,105);
+    color: white;
+    font-family: "Aileron";
+}
+.btn{
+    background-color: rgb(147,39,143);
+    font-family: 'Gilroy Heavy Italic';
+    color: white;
+    font-size: x-large;
+    border-color: rgb(147,39,143);
+}
+::placeholder{
+    font-family: "Aileron";
+    color: white;
+}
+@font-face {
+    font-family: "Gilroy Heavy Italic";
+    src: url("../../../assets/fonts/GILROY-HEAVYITALIC_0.OTF");
+}

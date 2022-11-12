@@ -1,0 +1,21 @@
+
+a:hover{
+    text-decoration: none;
+}
+#sidebar-container{
+    min-height: 100vh;
+}
+
+#sidebar-container .logo{
+    padding: .875rem 1.25rem;
+}
+
+#sidebar-container .menu{
+    width: 18rem;
+}
+
+.stat{
+    border-right: 1px solid grey;
+}
+
+.bg-mix{ background: linear-gradient(180deg,white 50%,grey 0,) !important;}

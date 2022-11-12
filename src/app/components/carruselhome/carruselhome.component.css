@@ -1,0 +1,15 @@
+.carousel{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    max-height: 400px; /* input your desired height here */
+}
+
+@media (max-width: 688px) {
+    .carousel-item>img {
+        max-height: 260px;
+    }
+}

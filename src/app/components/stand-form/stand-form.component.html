@@ -1,0 +1,40 @@
+<div class="col-md-4 offset-md-4">
+    <!-- Form -->
+    <div class="card animate_animated animate__bounceIn">     
+        <div class="card-body">
+            <!--Question -->
+            <div id="logoFondo" class="container text-center">
+                <img src={{pathimg}} alt="logostand" style="max-width: 250px; max-height: 200px;" class="py-2">
+            </div>
+            <hr>
+            <form #standForm="ngForm" (ngSubmit)="standForm.form.valid && onSubmit(standForm)">
+                <div class="form-group mb-3 text-center">
+                    <input type="number" class="form-control" name="idNumber" #idNumber="ngModel" placeholder="ID" required ngModel>
+                    <small class='text-danger' *ngIf='idNumber.invalid && idNumber.touched'>
+                        Ingresa un número de Identificación válido.
+                    </small>
+                     <!-- Invalid data alert -->
+                     <div *ngIf="!regStatus.global">
+                        <hr>
+                        <div class="alert alert-danger" style="font-size: x-small;" role="alert" > Este número de Identificación no se encuentra registrado. Por favor, llena el <u class = "text-info" routerLink="/register"> formulario de inscripción.</u></div>
+                    </div>
+                    <div *ngIf="regStatus.stand">
+                        <hr>
+                        <div class="alert alert-danger" style="font-size: x-small;" role="alert" > Este número de Identificación ya está registrado en este Stand.</div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Unexpected error alert -->
+                <div class="alert alert-danger text-center" role="alert" *ngIf="unexpectedErrorMssg">
+                    <strong> Hubo un error inesperado, por favor intenta nuevamente más tarde.</strong>
+                </div>
+                <!-- Registrar stand -->
+                <div class="d-grid gap-2">
+                    <button type = 'submit' class = 'btn btn-warning tabindex="-1"' [disabled]="standForm.invalid">
+                        <strong>Enviar</strong>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

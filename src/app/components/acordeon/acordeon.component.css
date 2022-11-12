@@ -1,0 +1,53 @@
+.accordion-header-text{
+    width: 100%;
+    text-align: center;
+}
+.accordion-body{
+    background-color: rgba(255, 255, 255);
+    color: black;
+    text-align: justify; 
+    font-family: "Aileron";
+}
+.accordion-collapse{
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    text-align: center;
+}
+.accordion-item{
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+.accordion-header{
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
+.accordion-button{
+    background-color: rgb(50,0,74);
+    color: white;
+    
+}
+#btn1, #btn2, #btn3{
+    font-size: x-large;
+    font-family: "Helvetica Narrow Bold";
+    border-color: white;
+    border-width: 2px;
+    text-align: center;      
+}
+.carousel.slide{
+    border-radius: 20px;
+    overflow: hidden;
+}
+@font-face {
+    font-family: "Gilroy Heavy Italic";
+    src: url("../../../assets/fonts/GILROY-HEAVYITALIC_0.OTF");
+}
+@font-face {
+    font-family: "Aileron";
+    src: url("../../../assets/fonts/AILERON-REGULAR.OTF");
+}
+@font-face {
+    font-family: "Helvetica Narrow Bold";
+    src: url("../../../assets/fonts/HELVE-NARROW-BOLD.TTF");
+}

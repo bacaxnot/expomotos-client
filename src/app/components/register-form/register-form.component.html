@@ -1,0 +1,77 @@
+<div class="col-md-4 offset-md-4">
+    <!-- Form -->
+    <div name="regForm" class="card animate__animated animate__flipInY">     
+        <div class="card-body">
+            <!--Title -->
+            <h5 class="card-title text-center">¡Regístrate!</h5>
+            <hr>
+            <form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)">
+                <!--Question-->
+                <div class="form-group pb-2">
+                    <input type="text" class = "form-control " name="completeName" #completeName="ngModel" minlength="3" placeholder="Nombre Completo" required ngModel>
+                        <small class='text-danger' *ngIf='completeName.invalid && completeName.touched'>
+                            Ingresa un nombre válido.
+                        </small>
+                </div>
+                <!--Question -->
+                <div class="form-group py-2">
+                    <input type="number" class = "form-control" name="idNumber" #idNumber="ngModel" placeholder="Numero de Identificación (CC)" required ngModel>
+                    <small class='text-danger' *ngIf='idNumber.invalid && idNumber.touched'>
+                        Ingresa un número de Identificación válido.
+                    </small>
+                    <!-- Invalid data alert -->
+                    <div *ngIf="regStatus.idNumber">
+                        <hr>
+                        <div class="alert alert-danger" style="font-size: x-small;" role="alert" > Este número de Identificación ya se encuentra registrado.</div>
+                    </div>
+                </div>
+                <div class="form-group py-2">
+                    <input type="email" class = "form-control" name="email" #email="ngModel" placeholder="Email" email required ngModel>
+                    <small class='text-danger' *ngIf='email.invalid && email.touched'>
+                        Ingresa un email válido.
+                    </small>
+                </div>
+                <!--Question -->
+                <div class="form-group py-2">
+                    <input type="number" class = "form-control" name="phoneNumber" #phoneNumber="ngModel" pattern="[0-9]{10}" placeholder="Número de Celular" required ngModel>
+                    <small class='text-danger' *ngIf='phoneNumber.invalid && phoneNumber.touched'>
+                        Ingresa un número de celular válido.
+                    </small>
+                </div>
+                <!--Question -->
+                <div class="form-group pt-2">
+                    <select class = "form-control" name="favBrand" #favBrand="ngModel" minlength="3" required ngModel>
+                        <option disabled selected hidden value="" >Selecciona tu marca de moto favorita</option>
+                        <option *ngFor='let brand of brands' [value] = 'brand'>{{brand}}</option>
+                    </select>
+                    <small class='text-danger' *ngIf='favBrand.invalid && favBrand.touched'>
+                        Selecciona una marca.
+                    </small>
+                </div>
+                <!-- PrivacyPolicy Checker -->
+                <div class="form-group form-check pt-2">
+                    <label for="privacyCheck">Acepto la
+                        <a routerLink='/datapolicy' tabindex="-1">Política de Privacidad y Tratamiento de Datos.</a>
+                    </label>
+                    <input type="checkbox" class = "form-check-input" name="privacyCheck" #privacyCheck="ngModel" required ngModel>
+                    <small class='text-danger' *ngIf='privacyCheck.invalid && privacyCheck.touched'>
+                        Debes aceptar nuestra Política para continuar.
+                    </small>
+                </div>
+                <hr>
+                <!-- Unexpected error alert -->
+                <div class="alert alert-danger text-center" role="alert" *ngIf="unexpectedErrorMssg">
+                    <strong> Hubo un error inesperado, por favor intenta nuevamente más tarde.</strong>
+                </div>
+                <!-- Register Button -->
+                <div class="d-grid gap-2">
+                    <button type = 'submit' class = 'btn tabindex="-1"' [disabled]="userForm.invalid">
+                        Enviar
+                    </button>
+                </div>
+            </form>    
+        </div>
+    </div>
+</div>
+
+
